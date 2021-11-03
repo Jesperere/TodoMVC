@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: 100;
+    color: rgba(175, 47, 47, 0.15);
+    text-align: center;
+}
+
+.information {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 65px;
+}
+
+#searchField {
+    font-size: 24px;
+    padding: 16px;
+    outline: none;
+    padding-left: 60px;
+}
+
+#main {
+    max-width: 90vw;
+    width: 550px;
+    margin: auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+     0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+#main #submitButt {
+    display: none;
+}
+
+input {
+    width: 100%;
+    border-style: none;
+}
+
+#todoContent {
+    margin: 20px 0px 40px 0;
+}
+
+footer p {
+    margin: 10px;
+    font-size: 10px;
+    color: #bfbfbf;
+}
+
+footer p a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+::placeholder {
+    color: #bfbfbf;
+    opacity: 0.4;
+    font-style: italic;
+}
+
+.labelinactive {
+    text-decoration: line-through;
+    color: #d9d9d9;
+}
+
+#count li {
+    display: inline;
+}
+
+li {
+    list-style-type: none;
+    color: #4d4d4d;
+}
+
+.allNotes {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border-style: none;
+    padding: 0;
+}
+
+.allNotes > li {
+    border-bottom: 1px solid lightgray;
+    position: relative;
+}
+
+.allNotes > li:last-child {
+    border-bottom: none;
+}
+
+.allNotes > li > div {
+    display: flex;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    align-items: center;
+}
+
+.allNotes > li > div > 
+
+.allNotes label {
+    flex: 1;
+    margin-right: 60px;
+}
+
+.destroy {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.allNotes li:hover .destroy {
+    opacity: 0.4;
+}
+
+li button[todo] {
+    min-width: 25px;
+    height: 25px;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+}
+
+li button[todo].togglebuttoninactive:before {
+    content: '✔';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 1px;
+    left: 5px;
+    font-size: 15px;
+}
+
+#amount {
+    font-weight: normal;
+    color: #777;
+}
+
+label {
+    font-size: 24px;
+    margin-left: 15px;
+}
+
+#all, #active, #completed, #amount {
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+#filters {
+    width: 550px;
+    background-color: rgb(255, 255, 255);
+    display: inline-flex;
+    flex-direction: row;
+}
+
+#all, #active, #completed, #clearCompleted {
+    padding: 3px 7px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 3px;
+    color: #777;
+}
+
+#all, #active, #completed {
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-width: 0.1px;
+    border-radius: 3px;
+}
+
+#all:hover, #active:hover, #completed:hover {
+    border-style: solid;
+    border-color: rgba(175, 47, 47, 0.2);
+    border-width: 0.1px;
+    border-radius: 3px;
+}
+
+#clearCompleted:hover {
+    text-decoration: underline;
+}
+
+#clearCompleted {
+    text-align: right;
+    font-size: 14px;
+}
+
+.destroy {
+    margin-right: 10px;
+}
+
+.destroy:hover {
+    display: block;
+}
+
+#main li {
+    word-break: break-all;
+    position: relative;
+}
+
+.hide {
+    display: none !important;
+}
+
+#searchForm {
+    margin: auto;
+    position: relative;
+    border-bottom: 1px solid rgb(214, 210, 210);
+}
+
+#completeAll {
+    position: absolute;
+    top: 20px;
+    left: 13px;
+    background: none;
+    border: none;
+    text-decoration: none;
+}
+
+#completeAll:hover {
+    cursor:default;
+}
+
+#count {
+    border-top: 1px solid rgb(214, 210, 210);
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    padding: 2px;
+}
+
+#amount, #clearButton {
+    flex: 1;
+}
+
+#tabs {
+    flex: 2;
+    margin-top: 3px;
+}
+
+#clearButton {
+     margin-top: 3px;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+.tab_active {
+    border-style: solid !important;
+    border-color: rgba(175, 47, 47, 0.2) !important;
+    border-width: 0.1px;
+    border-radius: 3px;
+} 
+
+
+@media(max-width: 500px) {
+    #count {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

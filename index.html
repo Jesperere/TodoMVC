@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="To-do application that lets you add, change and delete to-do items.">
+   <link rel="stylesheet" href="todo.css">
+   <script src="todo.js"></script>
+   <title>Backbone.js • TodoMVC </title>
+</head>
+
+<body>
+   <section id='todoContent'>
+      <header>
+         <h1>todos</h1>
+      </header>
+
+      <section id="main">
+         <form id="searchForm" onsubmit="init()">
+            <a onclick="completeAll()" id="completeAll" class="hide">🔽</a>
+            <input type="text" name="addNote" placeholder= "What needs to be done?" id="searchField" autocomplete="off">
+            <input type="submit" value="Submit" id='submitButt'>
+         </form>
+         <ul class="allNotes"></ul>
+         <footer id="count" class="hide">
+               <div id="amount"></div>
+               <div id="tabs">
+                  <button class='tab_active'id="all">All</button>
+                  <button class='tab_inactive'id="active">Active</button>
+                  <button class='tab_inactive'id="completed">Completed</button>
+               </div>
+               <div id="clearButton">
+                  <button id="clearCompleted">Clear completed</button>
+               </div>
+            </ul>
+         </footer>
+      </section>
+   </section>
+
+   <footer class='information'>
+      <p>Double-click to edit a todo</p>
+      <p>Written by <a href="">Jesper Johansson</a></p>
+      <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+   </footer>
+
+</body>
+
+</html>
